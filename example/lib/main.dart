@@ -198,7 +198,7 @@ class _MyMrz extends State<MyMrz> {
       isLoading = true;
     });
 
-    Mrz mrz;
+    Mrz? mrz;
     // Platform messages may fail, so we use a try/catch.
     try {
       FileChooserResult result =
@@ -212,7 +212,7 @@ class _MyMrz extends State<MyMrz> {
 
     setState(() {
       isLoading = false;
-      _mrz = mrz;
+      _mrz = mrz!;
     });
   }
 
